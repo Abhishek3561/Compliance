@@ -1,0 +1,28 @@
+:root {
+  --primary: #4f5dff;
+  --text: #111827;
+  --gray: #6b7280;
+  --bg: #ffffff;
+}
+
+section {
+  overflow: hidden;
+}
+
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+}
+
+body {
+  background: var(--bg);
+}

@@ -1,0 +1,209 @@
+.hero {
+  padding: 60px 0 80px;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* ── Content side ── */
+
+.hero-content {
+  flex: 1;
+  max-width: 620px;
+}
+
+/* Desktop H1: 64px / line-height 85px — per design spec */
+.hero-content h1 {
+  font-size: 64px;
+  line-height: 85px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.compliance-wrapper {
+  color: #4c5ceb;
+  position: relative;
+  display: inline-block;
+}
+
+.underline-vector {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Body Regular 18px / line-height 32px — per design spec */
+.hero-description {
+  font-size: 18px;
+  line-height: 32px;
+  color: #222;
+  max-width: 580px;
+  margin-bottom: 30px;
+}
+
+.points {
+  margin-bottom: 35px;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.point img {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.point span {
+  font-size: 18px;
+  color: #111;
+  font-weight: 500;
+}
+
+/* ── Buttons ── */
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  background: #4c5ceb;
+  color: white;
+  border: none;
+  padding: 14px 42px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #3a4ad4;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #4c5ceb;
+  border: 2px solid #4c5ceb;
+  padding: 14px 42px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.secondary-btn:hover {
+  background: #4c5ceb;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ── Image side ── */
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Banner image already contains arrows, rating card, trusted card */
+.banner-image {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+}
+
+/* ── Tablet (992px) ── */
+
+@media (max-width: 992px) {
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  /* Tablet H1: 54px — per design spec */
+  .hero-content h1 {
+    font-size: 54px;
+    line-height: 75px;
+  }
+
+  .hero-description {
+    margin: 0 auto 30px;
+  }
+
+  .point {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .banner-image {
+    max-width: 480px;
+  }
+}
+
+/* ── Mobile (480px) ── */
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 40px 0 60px;
+  }
+
+  /* Mobile H1: 38px — per design spec */
+  .hero-content h1 {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .point span {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner-image {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,213 @@
+.navbar {
+  width: 100%;
+  padding: 24px 0;
+  background: #ffffff;
+  position: relative;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+
+.logo img {
+  width: 145px;
+  display: block;
+}
+
+/* Navigation */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #4c5ceb;
+}
+
+.active-link {
+  color: #4c5ceb !important;
+}
+
+/* Hide close button and drawer contact on desktop */
+.menu-close,
+.drawer-contact {
+  display: none !important;
+}
+
+/* Contact Button */
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #4c5ceb;
+  color: white;
+
+  border: none;
+  outline: none;
+
+  padding: 14px 24px;
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.contact-btn:hover {
+  background: #3a4ad4;
+  transform: translateY(-2px);
+}
+
+.contact-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Mobile Menu Icon */
+
+.menu-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-btn img {
+  width: 32px;
+}
+
+/* Overlay */
+
+.nav-overlay {
+  display: none;
+}
+
+/* Tablet — hide contact button, show hamburger */
+
+@media (max-width: 992px) {
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links li {
+    font-size: 14px;
+  }
+
+  .contact-btn {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  /* FIX: hide desktop contact button at tablet — hamburger handles it */
+  .desktop-contact {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* Tablet/Mobile — show hamburger at 768px */
+
+@media (max-width: 768px) {
+
+  .menu-btn {
+    display: block;
+  }
+
+  /* Hide the desktop contact button */
+  .desktop-contact {
+    display: none;
+  }
+
+  /* Slide-in drawer */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 30px 40px;
+    gap: 24px;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 200;
+    overflow-y: auto;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+  }
+
+  /* Show close button inside drawer */
+  .menu-close {
+    display: flex !important;
+    align-self: flex-end;
+    font-size: 22px;
+    color: #1a1a1a;
+    cursor: pointer;
+    padding: 4px;
+    margin-bottom: 8px;
+  }
+
+  .menu-close:hover {
+    color: #4c5ceb;
+  }
+
+  /* Show contact button at bottom of drawer */
+  .drawer-contact {
+    display: flex !important;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+    width: 100%;
+  }
+
+  .drawer-contact .contact-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+
+  /* Overlay backdrop */
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 150;
+  }
+}
