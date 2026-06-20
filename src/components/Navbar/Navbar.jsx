@@ -14,16 +14,13 @@ function Navbar() {
           </div>
 
           <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-
-            <li className="menu-close" onClick={() => setMenuOpen(false)}>
-              ✕
-            </li>
-            <li className="active-link">Home</li>
-            <li>About Us</li>
-            <li>Our Services</li>
-            <li>Pricing</li>
-            <li>FAQ</li>
-            <li>Contact</li>
+            <li className="menu-close" onClick={() => setMenuOpen(false)}>✕</li>
+            <li className="active-link"><img src="/assets/Home.png" alt="" className="nav-icon" />Home</li>
+            <li><img src="/assets/AboutUs.png" alt="" className="nav-icon" />About Us</li>
+            <li><img src="/assets/Our Services.png" alt="" className="nav-icon" />Our Services</li>
+            <li><img src="/assets/Pricing.png" alt="" className="nav-icon" />Pricing</li>
+            <li><img src="/assets/FAQ.png" alt="" className="nav-icon" />FAQ</li>
+            <li><img src="/assets/Contact.png" alt="" className="nav-icon" />Contact</li>
             <li className="drawer-contact">
               <button className="contact-btn">
                 <img src="/assets/Contact-icon.png" alt="" />
@@ -33,10 +30,7 @@ function Navbar() {
           </ul>
 
           {menuOpen && (
-            <div
-              className="nav-overlay"
-              onClick={() => setMenuOpen(false)}
-            />
+            <div className="nav-overlay" onClick={() => setMenuOpen(false)} />
           )}
 
           <button className="contact-btn desktop-contact">
