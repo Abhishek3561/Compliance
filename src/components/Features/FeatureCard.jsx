@@ -3,7 +3,7 @@ function FeatureCard({ icon, title, desc }) {
     <div className="feature-card">
 
       <div className="card-icon">
-        <img src={icon} alt={title} />
+        <img src={icon} alt="" aria-hidden="true" />
       </div>
 
       <div className="card-content">

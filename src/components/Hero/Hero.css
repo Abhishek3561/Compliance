@@ -1,6 +1,7 @@
 .hero {
   padding: 60px 0 80px;
   overflow: hidden;
+  background: #ffffff;
 }
 
 .hero-container {
@@ -10,19 +11,16 @@
   gap: 40px;
 }
 
-/* ── Content side ── */
-
 .hero-content {
-  flex: 1;
-  max-width: 620px;
+  flex: 0 0 606px;
+  max-width: 606px;
 }
 
-/* Desktop H1: 64px / line-height 85px — per design spec */
 .hero-content h1 {
   font-size: 64px;
   line-height: 85px;
   font-weight: 700;
-  color: #000;
+  color: #000000;
   margin-bottom: 30px;
 }
 
@@ -35,16 +33,15 @@
 .underline-vector {
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -4px;
   width: 100%;
   pointer-events: none;
 }
 
-/* Body Regular 18px / line-height 32px — per design spec */
 .hero-description {
   font-size: 18px;
   line-height: 32px;
-  color: #222;
+  color: #222222;
   max-width: 580px;
   margin-bottom: 30px;
 }
@@ -68,11 +65,9 @@
 
 .point span {
   font-size: 18px;
-  color: #111;
+  color: #111111;
   font-weight: 500;
 }
-
-/* ── Buttons ── */
 
 .hero-buttons {
   display: flex;
@@ -83,18 +78,18 @@
 .primary-btn {
   background: #4c5ceb;
   color: white;
-  border: none;
+  border: 2px solid #4c5ceb;
   padding: 14px 42px;
   border-radius: 8px;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .primary-btn:hover {
-  background: #3a4ad4;
-  transform: translateY(-2px);
+  background: transparent;
+  color: #4c5ceb;
 }
 
 .secondary-btn {
@@ -106,35 +101,30 @@
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .secondary-btn:hover {
   background: #4c5ceb;
   color: white;
-  transform: translateY(-2px);
 }
 
-/* ── Image side ── */
-
 .hero-image {
-  flex: 1;
+  flex: 0 0 739.13px;
+  max-width: 739.13px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
-/* Banner image already contains arrows, rating card, trusted card */
 .banner-image {
   width: 100%;
-  max-width: 600px;
+  height: auto;
   display: block;
+  object-fit: contain;
 }
 
-/* ── Tablet (992px) ── */
-
 @media (max-width: 992px) {
-
   .hero-container {
     flex-direction: column;
     text-align: center;
@@ -142,10 +132,10 @@
   }
 
   .hero-content {
+    flex: 1;
     max-width: 100%;
   }
 
-  /* Tablet H1: 54px — per design spec */
   .hero-content h1 {
     font-size: 54px;
     line-height: 75px;
@@ -163,20 +153,22 @@
     justify-content: center;
   }
 
+  .hero-image {
+    flex: 1;
+    max-width: 100%;
+    justify-content: center;
+  }
+
   .banner-image {
-    max-width: 480px;
+    max-width: 520px;
   }
 }
 
-/* ── Mobile (480px) ── */
-
 @media (max-width: 480px) {
-
   .hero {
     padding: 40px 0 60px;
   }
 
-  /* Mobile H1: 38px — per design spec */
   .hero-content h1 {
     font-size: 38px;
     line-height: 48px;

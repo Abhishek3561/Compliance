@@ -14,7 +14,7 @@ function Navbar() {
           </div>
 
           <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-            {/* Close button inside drawer (mobile only) */}
+
             <li className="menu-close" onClick={() => setMenuOpen(false)}>
               ✕
             </li>
@@ -24,7 +24,6 @@ function Navbar() {
             <li>Pricing</li>
             <li>FAQ</li>
             <li>Contact</li>
-            {/* Contact button inside drawer for mobile */}
             <li className="drawer-contact">
               <button className="contact-btn">
                 <img src="/assets/Contact-icon.png" alt="" />
@@ -33,7 +32,6 @@ function Navbar() {
             </li>
           </ul>
 
-          {/* Overlay backdrop */}
           {menuOpen && (
             <div
               className="nav-overlay"

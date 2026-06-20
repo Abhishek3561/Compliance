@@ -49,12 +49,6 @@ function Hero() {
           </div>
         </div>
 
-        {/* 
-          FIX: Removed hero-vector, trusted-card, and rating-card HTML elements.
-          The Banner Image asset already contains the arrows, rating card, and 
-          trusted-by card baked into it — rendering them again in HTML caused 
-          the "double" elements visible in the screenshot.
-        */}
         <div className="hero-image">
           <img
             src="/assets/Banner Image.png"

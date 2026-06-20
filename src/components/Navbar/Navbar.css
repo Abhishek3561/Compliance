@@ -12,14 +12,10 @@
   justify-content: space-between;
 }
 
-/* Logo */
-
 .logo img {
   width: 145px;
   display: block;
 }
-
-/* Navigation */
 
 .nav-links {
   display: flex;
@@ -46,31 +42,23 @@
   color: #4c5ceb !important;
 }
 
-/* Hide close button and drawer contact on desktop */
 .menu-close,
 .drawer-contact {
   display: none !important;
 }
 
-/* Contact Button */
-
 .contact-btn {
   display: flex;
   align-items: center;
   gap: 10px;
-
   background: #4c5ceb;
   color: white;
-
   border: none;
   outline: none;
-
   padding: 14px 24px;
   border-radius: 10px;
-
   font-size: 15px;
   font-weight: 600;
-
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   white-space: nowrap;
@@ -86,8 +74,6 @@
   height: 18px;
 }
 
-/* Mobile Menu Icon */
-
 .menu-btn {
   display: none;
   cursor: pointer;
@@ -97,16 +83,11 @@
   width: 32px;
 }
 
-/* Overlay */
-
 .nav-overlay {
   display: none;
 }
 
-/* Tablet — hide contact button, show hamburger */
-
 @media (max-width: 992px) {
-
   .nav-links {
     gap: 20px;
   }
@@ -120,7 +101,6 @@
     font-size: 14px;
   }
 
-  /* FIX: hide desktop contact button at tablet — hamburger handles it */
   .desktop-contact {
     display: none;
   }
@@ -130,20 +110,15 @@
   }
 }
 
-/* Tablet/Mobile — show hamburger at 768px */
-
 @media (max-width: 768px) {
-
   .menu-btn {
     display: block;
   }
 
-  /* Hide the desktop contact button */
   .desktop-contact {
     display: none;
   }
 
-  /* Slide-in drawer */
   .nav-links {
     position: fixed;
     top: 0;
@@ -171,7 +146,6 @@
     width: 100%;
   }
 
-  /* Show close button inside drawer */
   .menu-close {
     display: flex !important;
     align-self: flex-end;
@@ -186,7 +160,6 @@
     color: #4c5ceb;
   }
 
-  /* Show contact button at bottom of drawer */
   .drawer-contact {
     display: flex !important;
     margin-top: auto;
@@ -202,7 +175,6 @@
     font-size: 15px;
   }
 
-  /* Overlay backdrop */
   .nav-overlay {
     display: block;
     position: fixed;

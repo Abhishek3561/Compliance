@@ -3,8 +3,6 @@
   background: #f8f9fd;
 }
 
-/* ── Header ── */
-
 .feature-header {
   display: flex;
   justify-content: space-between;
@@ -19,7 +17,6 @@
   max-width: 560px;
 }
 
-/* FIX: design spec H2 Desktop = 48px */
 .feature-heading h2 {
   font-size: 48px;
   line-height: 1.25;
@@ -42,18 +39,14 @@
 .feature-description {
   flex: 1;
   max-width: 500px;
-  /* FIX: align description text vertically to top, not center */
   padding-top: 8px;
 }
 
-/* FIX: design spec Body Regular = 18px / line-height 32 */
 .feature-description p {
   font-size: 16px;
   line-height: 30px;
   color: #4b5563;
 }
-
-/* ── Body ── */
 
 .feature-body {
   display: flex;
@@ -62,16 +55,14 @@
 }
 
 .feature-image {
-  flex: 1.1;
   position: relative;
 }
 
 .decorative-shape {
   position: absolute;
-  left: -155px;
-  bottom: -50px;
-  width: 150px;
-  z-index: 1;
+  left: -150px;
+  bottom: -40px;
+  width: 120px;
 }
 
 .main-feature-image {
@@ -89,21 +80,15 @@
   gap: 0;
 }
 
-/* ── Feature Card ── */
-
 .feature-card {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-
   padding: 20px 22px;
-
   background: #ffffff;
   border: 1px solid #e6e9f5;
   border-radius: 14px;
-
   margin-bottom: 16px;
-
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -136,7 +121,6 @@
   flex: 1;
 }
 
-/* FIX: design spec Title 20px */
 .card-content h3 {
   font-size: 18px;
   font-weight: 600;
@@ -144,7 +128,6 @@
   margin-bottom: 6px;
 }
 
-/* FIX: design spec body text 16px / line-height 32 */
 .card-content p {
   font-size: 15px;
   line-height: 1.65;
@@ -152,7 +135,6 @@
   margin-bottom: 8px;
 }
 
-/* FIX: "Read More" link seen in design */
 .card-read-more {
   font-size: 14px;
   font-weight: 600;
@@ -167,10 +149,7 @@
   text-decoration: underline;
 }
 
-/* ── Tablet (992px) ── */
-
 @media (max-width: 992px) {
-
   .feature-header {
     flex-direction: column;
     gap: 20px;
@@ -186,7 +165,6 @@
     max-width: 100%;
   }
 
-  /* FIX: Tablet H2 = 40px */
   .feature-heading h2 {
     font-size: 40px;
   }
@@ -220,15 +198,11 @@
   }
 }
 
-/* ── Mobile (576px) ── */
-
 @media (max-width: 576px) {
-
   .features {
     padding: 50px 0;
   }
 
-  /* FIX: Mobile H2 = 30px */
   .feature-heading h2 {
     font-size: 30px;
     line-height: 1.3;
